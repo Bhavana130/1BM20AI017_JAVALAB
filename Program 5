@@ -1,0 +1,38 @@
+//create an enum called size which indicates the size of pizza small,regular,medium,large
+//create a class called pizza which has an instance of size, constructor , method called order pizza which has switch statement having the class labels of size.
+//a driver class for main method creates an instance of test and orders test
+
+enum size {small,regular,medium,large}
+class pizza_1{
+size s;
+pizza_1(size pizzasize)
+{
+this.s = pizzasize;
+}
+
+public void orderpizza(){
+switch(s){
+case small: System.out.println("small");
+break;
+case regular: System.out.println("regular");
+break;
+case large: System.out.println("large");
+break;
+case medium: System.out.println("medium");
+break;
+default: System.out.println("no pizza");
+}
+}
+}
+
+public class pizza
+{
+public static void main(String args[])
+{
+for(size i:size.values())
+{
+pizza_1 t = new pizza_1(i);
+t.orderpizza();
+}
+}
+}
